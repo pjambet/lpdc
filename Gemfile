@@ -1,7 +1,8 @@
 source :rubygems
-gem 'sinatra', :git => "git://github.com/sinatra/sinatra.git"
+gem 'sinatra', "1.1.0"
 
 # other dependencies
-gem 'haml'                    # for instance, if you use haml
-gem 'activerecord', '~> 3.0'  # maybe you also need ActiveRecord 3.x
+gem 'haml'
+# gem 'activerecord', '~> 3.0'
 gem 'thin'
+gem 'redis'
