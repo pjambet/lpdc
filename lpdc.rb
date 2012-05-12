@@ -1,14 +1,14 @@
 #encoding: UTF-8
 require 'sinatra'
 
-class Lpdc < Sinatra::Base
-  configure do
-    require 'redis'
-    # uri = URI.parse(ENV["REDISTOGO_URL"])
-    # REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-  end
+# class Lpdc < Sinatra::Base
+#   configure do
+#     require 'redis'
+#     # uri = URI.parse(ENV["REDISTOGO_URL"])
+#     # REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+#   end
 
-end
+# end
 
 Encoding.default_external = 'UTF-8' if "1.9".respond_to?(:encoding)
 
