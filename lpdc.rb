@@ -10,7 +10,6 @@ require 'sinatra'
 
 # end
 
-Encoding.default_external = 'UTF-8' if "1.9".respond_to?(:encoding)
 
 get '/' do
   haml :index, layout: :application
@@ -22,7 +21,7 @@ end
 
 get '/produits/?' do
   @products = [
-    {'name' => 'Chouchous a la cacahuete',
+    {'name' => 'Chouchous à la cacahuète',
       'price' => 3,
       'weight' => 200,
       'desc' => "Retrouvez le goût des vacances avec le traditionnel chouchou de plage, revisité par mes soins. Une graine sélectionnée ainsi qu'une cuisson artisanale pour alimenter la nostalgie de l'enfance.",

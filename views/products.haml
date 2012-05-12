@@ -1,3 +1,4 @@
+-# coding: UTF-8
 %article#products
   %header
     %h1 Mes produits
@@ -37,7 +38,7 @@
   %section#product-list
     %h2 Les pralines
     %ul
-      - @products[0..0].each do |p|
+      - @products.each do |p|
         %li
           %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "paypal"}
             %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}/
