@@ -1,0 +1,53 @@
+!!! 5
+%html.no-js{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %link{:href => "/stylesheets/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/style.css", :rel => "stylesheet"}/
+    %script{:src => "/javascript/libs/modernizr-2.5.2-respond-1.1.0.min.js"}
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30118570-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  %body
+    /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    #header-container
+      %header.wrapper.clearfix
+        %h1#title Les Pralines de Claire
+        %nav
+          %ul
+            %li
+              %a{href: "/" } Accueil
+            %li
+              %a{href: "/produits"}Mes produits
+            %li
+              %a{href: "/contact"}Contact
+    #main-container
+      #main.wrapper.clearfix
+        = yield
+    #footer-container
+      %footer.wrapper
+        %h3
+          Les Pralines de Claire,
+          %a{href: "mailto:contact@lespralinesdeclaire.fr"} contact@lespralinesdeclaire.fr
+          , 06 64 12 91 23
+        %a{style: "display: none;", href: "http://www.referencementgratuit.fr", target: "_blank"}
+          %img{src: "http://www.referencementgratuit.fr/refgratuit-88x15.gif", alt: "Referencement Automatique", border: "0"}
+
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
+    %script{:src => "/javascript/script.js"}
+    %script{:src => "/javascript/bootstrap.min.js"}

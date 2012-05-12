@@ -1,0 +1,25 @@
+%article#contact
+  %header
+    %h1 Contact
+    %p Tél : 06 64 12 91 23
+    %p
+      %a{:href => "mailto:contact@lespralinesdeclaire.fr"} contact@lespralinesdeclaire.fr
+    %p N'hésitez pas à m'appeler ou à m'écrire. Ensemble nous trouverons une solution à vos exigences. Vous pouvez retirer vos commandes le dimanche matin au petit marché de Jacou (34), entre la pharmacie et la boulangerie. Je peux également livrer vos commandes groupées dans l'Agglomération de Montpellier.
+    %p Goûtez avant d'acheter. Tarifs dégressifs pour comités d'entreprise.
+  %footer
+    %h3 Expédition
+    %p
+      Réglez vos achats en ligne directement à partir de la page
+      = succeed "." do
+        %em
+          %a{:href => "/produits"} Produits
+      = succeed "Tarif" do
+        %br/
+      postal forfaitaire de 5€. Frais de port gratuits dès 30€ d'achat.
+    %h3 TVA
+    %p TVA non applicable article 293 B du Code Général des Impôts.
+%aside
+  %h3 Bientôt ...
+  %p Vous pourrez bientôt vous inscrire à ma newsletter. Prenez patience en grignotant des pralines ! Avec prudence tout de même, car ce produit provoque une forte dépendance.
+  .thumbnail
+    %img{:src => "images/claire.jpg"}/
