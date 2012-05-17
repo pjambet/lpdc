@@ -206,11 +206,11 @@ p {
   margin: 7px 0 0 0;
 }
 
-#footer-container footer a{
+a{
   color: #ED5100;
 }
 
-#footer-container footer a:visited{
+a:visited{
   color: #FF7400;
 }
 
