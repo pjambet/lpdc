@@ -618,7 +618,7 @@ a.thumbnail:hover {
     WIDE: Main
    ============ */
 
-	#main article{
+	#main > article{
 		float:left;
 		width:57%;
 	}
