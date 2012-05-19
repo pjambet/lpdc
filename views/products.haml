@@ -48,13 +48,13 @@
                 = p["name"]
                 .product-info
                   %span.price= "#{p["price"]} €"
-                  %span.product-detauls= "le sachet(#{p["weight"]})"
+                  %span.product-detauls= "le sachet(#{p["weight"]}g)"
                 %span (en savoir plus)
                 %i.icon-chevron-right
             .accordion-body.collapse{:id => p["collapse_id"]}
               .thumbnail
                 %img{:src => "images/#{p["img_path"]}"}/
-                %p=# p["desc"].force_encoding('UTF-8')
+                %p=p["desc"]
 
             %a.add-to-cart.btn{:href => "#"}
               %i.icon-plus
