@@ -1,0 +1,15 @@
+%article#gold_book
+  %h2 Ce qu'ont dit les autres internautes :
+  - @gold_book_items.each do |gbi|
+    - if !gbi[:message].empty?
+      %article.gold-book-item
+        - time = gbi[:created_at]
+        - if time
+          %time{datetime: ''}= "#{time.day}-#{time.month}-#{time.year}"
+        - if gbi[:author]
+          %h3
+            Ecrit par
+            %em= gbi[:author]
+        %p= gbi[:message] if gbi[:message]
+%aside
+  %a{href: '/'} Retour au site

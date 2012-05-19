@@ -461,6 +461,28 @@ nav a:hover{
 	padding:20px 0;
 }
 
+.gold-book-item {
+  background: url(../images/bg.png) repeat;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.gold-book-item time {
+  font-size: 13px;
+}
+
+.gold-book-item h3 {
+  font-size: 14px;
+}
+
+.gold-book-item h3 em {
+  font-size: 16px;
+}
+
+
 /* ===============
     ALL: IE Fixes
    =============== */
@@ -505,12 +527,19 @@ a.thumbnail:hover {
   padding: 9px;
 }
 
-aside #form-wrapper {
+aside form {
   position: relative;
   margin: 20px 0 0 0;
 }
 
-aside #form-wrapper:before {
+aside a, aside a:visited{
+  color: white;
+  font-size: 12px;
+  text-decoration: underline;
+  display: block;
+}
+
+aside form:before {
   content: '';
   width: 100%;
   height: 2px;
