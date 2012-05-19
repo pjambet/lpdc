@@ -2,7 +2,6 @@
 require 'sinatra'
 require 'sinatra/partial'
 require 'sequel'
-<<<<<<< HEAD
 
 set :partial_underscores, true
 
