@@ -17,6 +17,13 @@ DB.create_table :products do
   String :img_path
 end
 
+DB.create_table :gold_book do
+  primary_key :id
+  String :author
+  Text :message
+  DateTime :created_at
+end
+
 products = DB[:products]
 
 products.insert(

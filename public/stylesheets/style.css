@@ -169,10 +169,6 @@ p {
   border-radius: 0;
 }
 
-#contact + aside form input, #contact + aside form textarea{
-  width: 100%;
-}
-
 .btn-primary {
   background-color: rgb(247,96,0);
   background-image: -moz-linear-gradient(top, rgb(249,157,0), rgb(247,96,0));
@@ -184,6 +180,10 @@ p {
 }
 
 .btn-primary:hover {
+  background-color: rgb(247,96,0);
+}
+
+.btn-primary:active{
   background-color: rgb(247,96,0);
 }
 /* ===================
@@ -387,7 +387,7 @@ nav a:hover{
   text-shadow: 1px 1px 1px white;
   padding: 0 15px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: 13px;
+  font-style: 13px;f
 }
 
 #products li a:visited{
@@ -443,6 +443,19 @@ nav a:hover{
 	padding:0px 5% 10px;
 }
 
+#main aside form label{
+  color: white;
+  font: 14px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+#main aside textarea, #main aside input[type=text]{
+  width: 100%;
+}
+
+#main aside .btn-primary {
+  margin: 10px 0 0 0;
+}
+
 #footer-container footer{
 	color:white;
 	padding:20px 0;
@@ -490,6 +503,22 @@ a.thumbnail:hover {
 }
 .thumbnail .caption {
   padding: 9px;
+}
+
+aside #form-wrapper {
+  position: relative;
+  margin: 20px 0 0 0;
+}
+
+aside #form-wrapper:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: rgba(255,255,255,0.5);
+  position: absolute;
+  top: -10px;
+  left: 0;
 }
 
 /* =============================================================================
