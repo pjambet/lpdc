@@ -42,19 +42,19 @@
         %li
           %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "paypal"}
             %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}/
-            %input{:name => "hosted_button_id", :type => "hidden", :value => p["paypal_key"]}/
-            .accordion{:id => p["header_id"]}
-              %a.accordion-toggle{"data-parent" => "#{p["header_id"]}", "data-toggle" => "collapse", :href => "##{p["collapse_id"]}"}
-                = p["name"]
+            %input{:name => "hosted_button_id", :type => "hidden", :value => p[:paypal_key]}/
+            .accordion{:id => p[:header_id]}
+              %a.accordion-toggle{"data-parent" => "#{p[:header_id]}", "data-toggle" => "collapse", :href => "##{p[:collapse_id]}"}
+                = p[:name]
                 .product-info
-                  %span.price= "#{p["price"]} €"
-                  %span.product-detauls= "le sachet(#{p["weight"]}g)"
+                  %span.price= "#{p[:price].round} €"
+                  %span.product-detauls= "le sachet(#{p[:weight]}g)"
                 %span (en savoir plus)
                 %i.icon-chevron-right
-            .accordion-body.collapse{:id => p["collapse_id"]}
+            .accordion-body.collapse{:id => p[:collapse_id]}
               .thumbnail
-                %img{:src => "images/#{p["img_path"]}"}/
-                %p=p["desc"]
+                %img{:src => "images/#{p[:img_path]}"}/
+                %p=p[:desc]
 
             %a.add-to-cart.btn{:href => "#"}
               %i.icon-plus
