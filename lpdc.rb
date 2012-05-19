@@ -1,7 +1,7 @@
 #encoding: UTF-8
 require 'sinatra'
 require 'sequel'
-p ENV['DATABASE_URL']
+
 DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/lpdc')
 
 
