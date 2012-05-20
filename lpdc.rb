@@ -21,7 +21,7 @@ get '/produits/?' do
   haml :products, layout: :application
 end
 
-get '/gold_book' do
+get '/livre_dor/?' do
   @gold_book_items = DB[:gold_book].order(:created_at).reverse.limit(10)
   haml :gold_book, layout: :application
 end
