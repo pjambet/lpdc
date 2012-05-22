@@ -2,6 +2,12 @@ require 'sinatra'
 require 'sinatra/partial'
 require 'sequel'
 
+$KCODE = 'u' if RUBY_VERSION < '1.9'
+
+before do
+  content_type :html, 'charset' => 'utf-8'
+end
+
 set :partial_underscores, true
 
 DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/lpdc')
