@@ -210,6 +210,11 @@ p {
   margin: 7px 0 0 0;
 }
 
+header h1 a, header h1 a:hover, header h1 a:visited{
+  text-decoration: none;
+  color: white;
+}
+
 a{
   color: #ED5100;
 }
