@@ -1,2 +1,5 @@
-require './lpdc'
-run Sinatra::Application
+require './app'
+
+use Rack::ShowExceptions
+
+run App.new

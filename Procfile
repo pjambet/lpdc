@@ -1,1 +1,1 @@
-web: bundle exec ruby lpdc.rb -p $PORT
+web: bundle exec unicorn -p $PORT
