@@ -12,12 +12,13 @@
     %h3 Expédition
     %p
       Réglez vos achats en ligne directement à partir de la page
-      = succeed "." do
-        %em
-          %a{:href => "/produits"} Produits
-      = succeed "Tarif" do
-        %br/
-      postal forfaitaire de 5€. Frais de port gratuits dès 30€ d'achat.
+      %em
+        %a{:href => "/produits"} Produits
+      \.
+    %p
+      Tarif postal forfaitaire de 5€ pour la France métropolitaine, 15€ pour l'Europe.
+    %p
+      Frais de port gratuits dès 30€ d'achat (France métropolitaine).
     %h3 TVA
     %p TVA non applicable article 293 B du Code Général des Impôts.
 %aside
