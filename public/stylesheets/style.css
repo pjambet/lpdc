@@ -148,6 +148,7 @@ aside p{
   -moz-transform:rotate(90deg);
   -webkit-transform:rotate(90deg);
   -o-transform:rotate(90deg);
+
 }
 
 p {
@@ -215,7 +216,7 @@ header h1 a, header h1 a:hover, header h1 a:visited{
   color: white;
 }
 
-a{
+a, a:hover{
   color: #ED5100;
 }
 
