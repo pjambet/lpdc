@@ -397,7 +397,7 @@ nav a:hover{
   text-shadow: 1px 1px 1px white;
   padding: 0 15px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: 13px;f
+  font-style: 13px;
 }
 
 #products li a:visited{
@@ -621,7 +621,7 @@ aside form:before {
 
 @media only screen and (max-width: 767px) {
   #header-container nav ul li a {
-    padding: 25px 12px;
+    padding: 25px 6px;
   }
   #header-container nav ul li:nth-child(2) a {
     padding: 25px 12px;
