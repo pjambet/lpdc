@@ -25,5 +25,5 @@ $(function() {
       $(e.target).parents('li').toggleClass('opened-product')
     })
   })
-  if ($('.carousel').length > 0) $('.carousel').carousel({'interval': 3000})
+  if ($('.carousel').length > 0) $('.carousel').carousel()
 })
