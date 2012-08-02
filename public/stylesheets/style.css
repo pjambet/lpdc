@@ -409,6 +409,7 @@ nav a:hover{
 
 #products a.right, #products a.left {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  top: 50%;
 }
 
 #products li a.add-to-cart{
