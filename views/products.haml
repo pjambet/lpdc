@@ -7,74 +7,52 @@
   %section
     #myCarousel.carousel.slide
       .carousel-inner
-        .item.active
-          %img{:alt => "", :src => "images/carousel-1.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-2.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-3.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-4.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-5.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-6.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-7.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-8.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-9.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-10.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-11.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-12.jpg"}/
-        .item
-          %img{:alt => "", :src => "images/carousel-13.jpg"}/
-      %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"} &lsaquo;
-      %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"} &rsaquo;
+        - 13.times do |i|
+          .item{class: i == 0 ? 'active' : ''}
+            %img{alt: "", src: "images/carousel-#{i+1}.jpg"}/
+
+      %a.left.carousel-control{"data-slide" => "prev", href: "#myCarousel"} &lsaquo;
+      %a.right.carousel-control{"data-slide" => "next", href: "#myCarousel"} &rsaquo;
   %section#product-list
     %h2 Les pralines
     %ul
       - @products.each do |p|
         %li
-          %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "paypal"}
-            %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}/
-            %input{:name => "hosted_button_id", :type => "hidden", :value => p[:paypal_key]}/
-            .accordion{:id => p[:header_id]}
-              %a.accordion-toggle{"data-parent" => "#{p[:header_id]}", "data-toggle" => "collapse", :href => "##{p[:collapse_id]}"}
+          %form{action: "https://www.paypal.com/cgi-bin/webscr", method: "post", target: "paypal"}
+            %input{name: "cmd", type: "hidden", value: "_s-xclick"}/
+            %input{name: "hosted_button_id", type: "hidden", value: p[:paypal_key]}/
+            .accordion{id: p[:header_id]}
+              %a.accordion-toggle{"data-parent" => "#{p[:header_id]}", "data-toggle" => "collapse", href: "##{p[:collapse_id]}"}
                 = p[:name]
                 .product-info
                   %span.price= "#{p[:price].round} €"
                   %span.product-detauls= "le sachet(#{p[:weight]}g)"
                 %span (en savoir plus)
                 %i.icon-chevron-right
-            .accordion-body.collapse{:id => p[:collapse_id]}
+            .accordion-body.collapse{id: p[:collapse_id]}
               .thumbnail
-                %img{:src => "images/#{p[:img_path]}"}/
+                %img{src: "images/#{p[:img_path]}"}/
                 %p=p[:desc]
 
-            %a.add-to-cart.btn{:href => "#"}
+            %a.add-to-cart.btn{href: "#"}
               %i.icon-plus
               Ajouter au panier
-            %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif", :width => "1"}/
+            %img{alt: "", src: "https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"}/
 
-  %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "paypal"}
-    %input{:name => "cmd", :type => "hidden", :value => "_cart"}/
-    %input{:name => "business", :type => "hidden", :value => "NBJLQ7LDMRX2N"}/
-    %input{:name => "display", :type => "hidden", :value => "1"}/
-    %a#checkout.btn.btn-primary{:href => "#"}
+  %form{action: "https://www.paypal.com/cgi-bin/webscr", method: "post", target: "paypal"}
+    %input{name: "cmd", type: "hidden", value: "_cart"}/
+    %input{name: "business", type: "hidden", value: "NBJLQ7LDMRX2N"}/
+    %input{name: "display", type: "hidden", value: "1"}/
+    %a#checkout.btn.btn-primary{href: "#"}
       %i.icon-shopping-cart.icon-white
       Cliquez ici pour visualiser votre panier
-    %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif", :width => "1"}/
+    %img{alt: "", src: "https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"}/
   %section
     %h2 Sur commande
     %p
       Une envie spéciale ? Une graine que vous affectionnez particulièrement ?
       N'hésitez pas à
-      %a{:href => "mailto:contact@lespralinesdeclaire.fr"} me contacter
+      %a{href: "mailto:contact@lespralinesdeclaire.fr"} me contacter
     %p
       Noix de Macadamia, noix de Pécan, noix du Brésil, graines de courge, de tournesol, je m'adapte à vos goûts. Je peux vous créer des mélanges sur mesure afin de donner une touche originale à vos fêtes.
       %br/

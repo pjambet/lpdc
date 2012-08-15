@@ -219,7 +219,7 @@ a{
   color: #ED5100;
 }
 
-a:visited{
+a:visited, a:hover{
   color: #FF7400;
 }
 
@@ -583,7 +583,7 @@ aside form:before {
   }
 
   #products li .accordion, #products li.opened-product .accordion {
-    width: 80%
+    width: 100%
   }
 
   #products li:hover .accordion, #products li.opened-product .accordion{
