@@ -4,6 +4,7 @@ require 'rubygems'
 require 'haml'
 require 'sinatra'
 require 'sinatra/partial'
+require 'sinatra/minify'
 require 'sequel'
 
 class App < Sinatra::Application
@@ -17,6 +18,7 @@ class App < Sinatra::Application
   set :default_encoding, 'utf-8'
   DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/lpdc')
 
+  register Sinatra::Minify
 
   get '/' do
     haml :index, layout: :application

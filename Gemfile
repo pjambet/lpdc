@@ -6,3 +6,5 @@ gem 'sinatra-partial'
 gem 'haml'
 gem 'sequel'
 gem 'pg'
+gem 'sinatra-minify'
+
