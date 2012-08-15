@@ -33,6 +33,11 @@ class App < Sinatra::Application
     haml :products, layout: :application
   end
 
+  get '/distributeurs' do
+    @distributors = DB[:distributors].all
+    haml :distributors, layout: :application
+  end
+
   get '/livre_dor/?' do
     @gold_book_items = DB[:gold_book].order(:created_at).reverse.limit(10)
     haml :gold_book, layout: :application

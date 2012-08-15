@@ -1,0 +1,18 @@
+-# coding: utf-8
+%article#distributors
+  %header
+    %h1 Distributeurs
+    %p Vous pouvez trouver Les pralines de Claire chez les distributeurs suivants :
+    %ul
+      - @distributors.each do |dis|
+        %li.distributor
+          %h3
+            - if dis[:url] && dis[:url] != ''
+              %a{href: dis[:url], target: '_blank'}= dis[:name]
+            - else
+              = dis[:name]
+          %p= [dis[:description], dis[:address]].compact.reject{|c| c.empty?}.join(' à ')
+
+%aside
+  = partial :gold_book
+

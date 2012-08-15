@@ -4,7 +4,7 @@ require "sequel"
 
 DB = Sequel.connect(ENV['DATABASE_URL'] || "postgres://localhost/lpdc")
 
-# create an products table
+# create a products table
 DB.create_table :products do
   primary_key :id
   String :name
@@ -24,7 +24,18 @@ DB.create_table :gold_book do
   DateTime :created_at
 end
 
+
+DB.create_table :distributors do
+  primary_key :id
+  String :name
+  String :url
+  Text :description
+  Text :address
+  DateTime :created_at
+end
+
 products = DB[:products]
+distributors = DB[:distributors]
 
 products.insert(
   'name' => 'Chouchous à la cacahuète',
@@ -116,3 +127,48 @@ products.insert(
   'header_id' => 'accordion-pepper',
   'collapse_id' => 'collapsePepper',
   'img_path' => 'pepper.jpg')
+products.insert(
+  'name' => "Amandes anisées",
+  'price' => 5,
+  'weight' => 200,
+  'desc' => "Les pralines aux amandes délicatement enrobées de poudre d'anis apporteront de la fraîcheur à vos apéritifs",
+  'paypal_key' => 'DPWVCHYA2NHGN',
+  'header_id' => 'accordion-anise',
+  'collapse_id' => 'collapseAnise',
+  'img_path' => 'anise.jpg')
+products.insert(
+  'name' => "Pralines au sésame",
+  'price' => 5,
+  'weight' => 200,
+  'desc' => "Pralines aux amandes roulées dans du sésame bio pour un double plaisir de goût et de texture",
+  'paypal_key' => 'U25UXKFW27FDQ',
+  'header_id' => 'accordion-sesame',
+  'collapse_id' => 'collapseSesame',
+  'img_path' => 'sesame.jpg')
+
+
+# Distributors
+
+distributors.insert(
+  'name' => 'Saveurs d’Autrefois',
+  'url' => 'http://annuaire.118712.fr/Herault-34/Lattes-34970/Saveurs-d-autrefois-(biomonde)-0467644155_1E0080F00007R30900T60590S',
+  'description' => 'épicerie bio',
+  'address' => 'Lattes (34)')
+
+distributors.insert(
+  'name' => 'La Malle aux Délices',
+  'url' => 'http://www.annuaire-inverse-france.com/0232347691/la-malle-aux-delices',
+  'description' => 'épicerie fine - cave à vin',
+  'address' => 'Pacy-sur-Eure (27)')
+
+distributors.insert(
+  'name' => 'Hôtel La Peiriero',
+  'url' => 'http://www.hotel-peiriero.com/',
+  'description' => '',
+  'address' => 'Fontvieille (13)')
+
+distributors.insert(
+  'name' => 'Ubiquitus',
+  'url' => '',
+  'description' => 'Conciergerie d’entreprise',
+  'address' => 'Lyon (69)')
