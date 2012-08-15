@@ -258,24 +258,6 @@ nav a{
   font-size: 14px;
 }
 
-nav li:first-child a{
-  width: 56px;
-}
-
-nav li:nth-child(2) a{
-  width: 80px;
-  height: 56px;
-  padding: 10px 2%;
-}
-
-nav li:nth-child(3) a{
-  width: 58px;
-}
-
-nav li:nth-child(4) a{
-  width: 90px;
-}
-
 nav a:hover, nav a:visited{
 	color:white;
 }
@@ -651,17 +633,13 @@ aside form:before {
 }
 
 @media only screen and (max-width: 1077px){
-  #header-container nav ul li:nth-child(2) a {
-    padding: 19px 5px 5px 5px;
-  }
+
 }
 
 @media only screen and (max-width: 767px) {
   #header-container nav ul li a {
     padding: 25px 6px;
-  }
-  #header-container nav ul li:nth-child(2) a {
-    padding: 25px 12px;
+    font-size: 15px;
   }
 }
 @media only screen and (min-width: 480px) {
@@ -672,10 +650,11 @@ aside form:before {
 
 	nav a{
 		float:left;
-		width:27%;
+		width:18.5%;
 		margin:0 1.7%;
 		padding:25px 2%;
 		margin-bottom:0;
+    font-size: 12px;
 	}
 
 	nav li:first-child a{ margin-left:0;  }
@@ -732,6 +711,22 @@ aside form:before {
 		float:right;
 		width:28%;
 	}
+
+  nav li:first-child a{
+    width: 56px;
+  }
+
+  nav li:nth-child(2) a{
+    width: 80px;
+  }
+
+  nav li:nth-child(3) a{
+    width: 58px;
+  }
+
+  nav li:nth-child(4) a{
+    width: 90px;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -744,6 +739,12 @@ aside form:before {
 		width:1026px; /* 1140px - 10% for margins */
 		margin:0 auto;
 	}
+}
+
+@media only screen and (max-width: 545px) and (min-width: 480px){
+  #header-container nav ul li a{
+    font-size: 12px;
+  }
 }
 
 /* =============================================================================
