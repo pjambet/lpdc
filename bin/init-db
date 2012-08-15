@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+puts 'Deleting existing Database'
+`dropdb lpdc`
+puts 'Recreating it'
+`createdb lpdc`
+puts 'Importing data'
+`ruby db/data.rb`
+
