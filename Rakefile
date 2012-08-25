@@ -8,3 +8,12 @@ task :minify do
   puts "Construction complete!"
 end
 
+namespace :db do
+  desc "Create the tables"
+  task :init do
+    require './app.rb'
+    puts "Initializing DB..."
+    `ruby db/data.rb`
+    puts "Data base ready !"
+  end
+end

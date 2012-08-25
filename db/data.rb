@@ -4,6 +4,16 @@ require "sequel"
 
 DB = Sequel.connect(ENV['DATABASE_URL'] || "postgres://localhost/lpdc")
 
+DB.create_table? :gold_book do
+  primary_key :id
+  String :author
+  Text :message
+  DateTime :created_at
+end
+
+DB.drop_table :products
+DB.drop_table :distributors
+
 # create a products table
 DB.create_table :products do
   primary_key :id
@@ -16,14 +26,6 @@ DB.create_table :products do
   String :paypal_key
   String :img_path
 end
-
-DB.create_table :gold_book do
-  primary_key :id
-  String :author
-  Text :message
-  DateTime :created_at
-end
-
 
 DB.create_table :distributors do
   primary_key :id
@@ -64,33 +66,6 @@ products.insert(
   'header_id' => 'accordion-almond',
   'collapse_id' => 'collapseAlmond',
   'img_path' => 'almond2.jpg')
-products.insert(
-  'name' => 'Noisettes',
-  'price' => 5,
-  'weight' => 200,
-  'desc' => "Les amateurs de noisette ont enfin trouvé leur confiserie préférée avec ma praline à la noisette.",
-  'paypal_key' => '5CVR3G5T9ZN7Q',
-  'header_id' => 'accordion-hazelnut',
-  'collapse_id' => 'collapseHazelnut',
-  'img_path' => 'hazelnut.jpg')
-products.insert(
-  'name' => 'Noix de cajou',
-  'price' => 5,
-  'weight' => 150,
-  'desc' => "La cajou est une noix très tendre, qui n'endommagera pas vos appareils dentaires.",
-  'paypal_key' => 'YPDHCYV67ND8Y',
-  'header_id' => 'accordion-cashew',
-  'collapse_id' => 'collapseCashew',
-  'img_path' => 'cashew.jpg')
-products.insert(
-  'name' => 'Mélange noble',
-  'price' => 5,
-  'weight' => 150,
-  'desc' => "La noix de macadamia, très parfumée, entre dans la composition du mélange noble avec des amandes, des noisettes, des noix de cajou et de pécan.",
-  'paypal_key' => 'N8WMZ9X3DJVT2',
-  'header_id' => 'accordion-macadamia',
-  'collapse_id' => 'collapseMacadamia',
-  'img_path' => 'noble2.jpg')
 products.insert(
   'name' => 'Mélange spécial Amacoto',
   'price' => 5,
@@ -145,6 +120,34 @@ products.insert(
   'header_id' => 'accordion-sesame',
   'collapse_id' => 'collapseSesame',
   'img_path' => 'sesame.jpg')
+products.insert(
+  'name' => 'Noisettes',
+  'price' => 5,
+  'weight' => 200,
+  'desc' => "Les amateurs de noisette ont enfin trouvé leur confiserie préférée avec ma praline à la noisette.",
+  'paypal_key' => '5CVR3G5T9ZN7Q',
+  'header_id' => 'accordion-hazelnut',
+  'collapse_id' => 'collapseHazelnut',
+  'img_path' => 'hazelnut.jpg')
+products.insert(
+  'name' => 'Noix de cajou',
+  'price' => 5,
+  'weight' => 150,
+  'desc' => "La cajou est une noix très tendre, qui n'endommagera pas vos appareils dentaires.",
+  'paypal_key' => 'YPDHCYV67ND8Y',
+  'header_id' => 'accordion-cashew',
+  'collapse_id' => 'collapseCashew',
+  'img_path' => 'cashew.jpg')
+products.insert(
+  'name' => 'Mélange noble',
+  'price' => 5,
+  'weight' => 150,
+  'desc' => "La noix de macadamia, très parfumée, entre dans la composition du mélange noble avec des amandes, des noisettes, des noix de cajou et de pécan.",
+  'paypal_key' => 'N8WMZ9X3DJVT2',
+  'header_id' => 'accordion-macadamia',
+  'collapse_id' => 'collapseMacadamia',
+  'img_path' => 'noble2.jpg')
+
 
 
 # Distributors
@@ -152,13 +155,13 @@ products.insert(
 distributors.insert(
   'name' => 'Saveurs d’Autrefois',
   'url' => 'http://annuaire.118712.fr/Herault-34/Lattes-34970/Saveurs-d-autrefois-(biomonde)-0467644155_1E0080F00007R30900T60590S',
-  'description' => 'épicerie bio',
+  'description' => 'Épicerie bio',
   'address' => 'Lattes (34)')
 
 distributors.insert(
   'name' => 'La Malle aux Délices',
   'url' => 'http://www.annuaire-inverse-france.com/0232347691/la-malle-aux-delices',
-  'description' => 'épicerie fine - cave à vin',
+  'description' => 'Épicerie fine - cave à vin',
   'address' => 'Pacy-sur-Eure (27)')
 
 distributors.insert(
