@@ -146,7 +146,7 @@ products.insert(
   'paypal_key' => 'N8WMZ9X3DJVT2',
   'header_id' => 'accordion-macadamia',
   'collapse_id' => 'collapseMacadamia',
-  'img_path' => 'noble2.jpg')
+  'img_path' => 'noble.jpg')
 
 
 
