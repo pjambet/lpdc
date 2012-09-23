@@ -142,7 +142,7 @@ products.insert(
   'name' => 'Mélange noble',
   'price' => 5,
   'weight' => 150,
-  'desc' => "La noix de macadamia, très parfumée, entre dans la composition du mélange noble avec des amandes, des noisettes, des noix de cajou et de pécan.",
+  'desc' => "Ce mélange de trois graines nobles, noix de cajou, amandes, noisettes est un produit idéal de découverte."
   'paypal_key' => 'N8WMZ9X3DJVT2',
   'header_id' => 'accordion-macadamia',
   'collapse_id' => 'collapseMacadamia',
