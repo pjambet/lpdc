@@ -39,7 +39,7 @@ class App < Sinatra::Application
   end
 
   get '/livre_dor/?' do
-    @gold_book_items = DB[:gold_book].order(:created_at).reverse.limit(10)
+    @gold_book_items = DB[:gold_book].order(:created_at).reverse
     haml :gold_book, layout: :application
   end
 
