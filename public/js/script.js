@@ -26,4 +26,6 @@ $(function() {
     })
   })
   if ($('.carousel').length > 0) $('.carousel').carousel()
+
+  $('input[name=flare]').hide()
 })

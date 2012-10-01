@@ -4,6 +4,7 @@
   %textarea#message{name: 'message', rows: 3}
   %label{for: 'name'} Votre nom
   %input#name{type: 'text', name: 'author'}
+  %input{type: 'text', name: 'flare'}
   %input{type: 'hidden', name: 'callback', value: request.path_info}
   %input.btn.btn-primary{type: 'submit', value: 'Envoyer'}
   %a{href: '/livre_dor'} Consultez le livre d'or

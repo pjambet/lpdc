@@ -46,7 +46,11 @@ class App < Sinatra::Application
   post '/gold_book' do
     gold_book = DB[:gold_book]
     callback_url = params.delete('callback')
-    gold_book.insert(params.merge(created_at: DateTime.now))
+    # it's a bot
+    antibot = params.delete('flare')
+    if antibot.nil? || antibot == ""
+      gold_book.insert(params.merge(created_at: DateTime.now))
+    end
     redirect callback_url
   end
 end
