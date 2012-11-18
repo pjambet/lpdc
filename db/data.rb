@@ -175,3 +175,21 @@ distributors.insert(
   'url' => '',
   'description' => 'Conciergerie d’entreprise',
   'address' => 'Lyon (69)')
+
+distributors.insert(
+  'name' => 'D\'Oc et de Gascogne',
+  'url' => 'http://www.docetdegascogne.fr/DOCETDEGASCOGNE.html',
+  'description' => 'Épicerie fine',
+  'address' => 'Castelnau-le-Lez (34)')
+
+distributors.insert(
+  'name' => 'Le Boutik\'R',
+  'url' => 'http://www.leboutikr.fr/',
+  'description' => 'Souvenirs et produits du terroir',
+  'address' => 'Montpellier (34)')
+
+distributors.insert(
+  'name' => 'Le caveau du Mas du Pont',
+  'url' => 'http://www.mas-du-pont.com/la-cave-a-vin-du-mas-du-pont.html',
+  'description' => 'Vins fins et produits du terroir',
+  'address' => "Teyran / Le Crès (34)")
