@@ -1,7 +1,9 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    haml (3.1.5)
+    haml (5.0.0)
+      temple (>= 0.8.0)
+      tilt
     kgio (2.7.4)
     pg (0.12.2)
     rack (1.4.1)
@@ -13,6 +15,7 @@ GEM
     sinatra-minify (0.2.3)
     sinatra-partial (0.3.0)
       sinatra
+    temple (0.8.2)
     tilt (1.3.3)
     unicorn (4.3.0)
       kgio (~> 2.6)
